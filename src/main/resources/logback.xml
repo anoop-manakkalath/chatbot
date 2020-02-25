@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="OUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} %X{sourceThread} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./logs/rolling.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] %level %logger{35} - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- We are rolling over daily -->
+            <fileNamePattern>./logs/chatbot.log.timeroll.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- keep 10 days' worth of history capped at 1GB total size -->
+            <maxHistory>10</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- default is DEBUG -->
+    <root level="DEBUG">
+        <appender-ref ref="OUT" />
+        <appender-ref ref="ROLLING" />
+    </root>
+
+</configuration>

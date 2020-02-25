@@ -1,0 +1,10 @@
+greeting	 hi hi. hello how are you ? hey . hows it going good morning good evening good afternoon howdy
+choose-facility     choose facility
+change-facility     change facility
+create-dock     create dock. create sort configuration.
+create-copy     create copy. create from existing dock. existing dock. copy dock.
+frankenstein-dock       frankenstein dock. frankenstein. create from subdocks.
+refresh-load-plan       refresh load plan
+edit-dock       edit dock. edit sort configuration. update dock. update sort configuration.
+conversation-continue	 ok wow great oh is it ? oh ohh Thats great Good Really hmm lemme think hm hmmm hmmmmm
+conversation-complete	 Thanks done that's all thats it. thats it I am done Thank you for information Thank. thanks. thank you. thanks nothing else thats it.
